@@ -32,3 +32,19 @@
 - ConvergenceWarning: the model ran out of attempts because columns are on very different scales (balance in thousands vs 0/1 columns). Fix in Lesson 4: scale the data
 - Raw probability output was hard to read, so I used a for loop and f-strings to print one sentence per customer
 **Question to answer next:** 10 customers isn't enough. How good is the model across all 9,043 test customers?
+
+## Lesson 4 – Is the model any good? (7 Oct 2026)
+**Did:** scaled the data, retrained, compared accuracy with a baseline, read a confusion matrix, tested five cut-offs
+**Learned:**
+- Scaling: (value − average) ÷ typical spread; fit the scaler on train only, never on test
+- Accuracy hides problems when one answer is rare
+- Confusion matrix: caught, missed, wasted, correctly ignored
+- Precision vs recall, and the trade-off between them
+- Choosing a cut-off is a business decision: cost of an offer vs value of a buyer
+- A better cut-off ≠ a better model
+**Result:** at a 20% cut-off, 999 offers catch 466 of 1,058 buyers
+**Problems & fixes:**
+- Warning came back: I reran the Lesson 3 cell, which retrained the unscaled model. Fix: keep training and printing in separate cells, then Restart + Run All
+- Confusion matrix was hard to read at first; breaking customers down as a tree made it clear
+**Question to answer next:** can a stronger model catch more than 466 buyers with the same ~1,000 offers?
+
