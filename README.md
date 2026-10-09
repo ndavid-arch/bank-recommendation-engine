@@ -7,7 +7,7 @@ Learning project: a next-best-action recommendation engine for bank customers, u
 - [x] 2. What drives a yes
 - [x] 3. First model: one-hot encoding, train/test split, logistic regression, yes-probabilities
 - [x] 4. Is the model any good? Scaling, accuracy vs precision and recall, the confusion matrix
-- [ ] 5. Stronger models: decision trees and random forests, compared fairly
+- [x] 5. Stronger models: decision trees and random forests, compared fairly
 
 ### Phase 2: Loan risk (week 2)
 - [ ] 6. A credit risk dataset, plus cleaning missing and messy data

@@ -48,3 +48,17 @@
 - Confusion matrix was hard to read at first; breaking customers down as a tree made it clear
 **Question to answer next:** can a stronger model catch more than 466 buyers with the same ~1,000 offers?
 
+## Lesson 5 – Stronger models (9 Oct 2026)
+**Did:** wrote a fair 1,000-offer test, trained a decision tree and a random forest, compared all three
+**Learned:**
+- scikit-learn models all work the same way: import, create, fit, predict_proba
+- A function with a default value (n=1000) can be reused for every model
+- How a decision tree splits customers into piles and scores them
+- Overfitting: tiny piles mean memorising, not learning
+- Check that the model's questions make business sense (timing vs customer)
+- Random forests average many trees for a finer, steadier ranking
+**Result:** forest 499 > logistic regression 466 > tree 377 buyers per 1,000 offers
+**Problems & fixes:**
+- Confused by "10% say yes": two different campaigns (past vs this one). Writing "X said YES this time → X ÷ N" made it clear
+- Didn't see how a tree scores; the 10-customer example with Excel-style filters made it click
+**Question to answer next:** can the same approach predict who will struggle to repay a loan?
