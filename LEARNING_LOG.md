@@ -62,3 +62,9 @@
 - Confused by "10% say yes": two different campaigns (past vs this one). Writing "X said YES this time → X ÷ N" made it clear
 - Didn't see how a tree scores; the 10-customer example with Excel-style filters made it click
 **Question to answer next:** can the same approach predict who will struggle to repay a loan?
+
+### Lesson 5 bonus – LightGBM
+- LightGBM builds trees in a line; each tree fixes the mistakes of the previous ones (like revising only what you got wrong after each mock exam).
+- Result with 1,000 offers: LightGBM 506, forest 499, logistic regression 466, tree 377.
+- A 7-buyer gap over the forest is too small to call a clear win; it could be luck of the split.
+- learning_rate=0.05 keeps each step small to avoid memorising the training data.
