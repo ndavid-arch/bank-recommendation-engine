@@ -10,7 +10,7 @@ Learning project: a next-best-action recommendation engine for bank customers, u
 - [x] 5. Stronger models: decision trees and random forests, compared fairly and LightGBM
 
 ### Phase 2: Loan risk (week 2)
-- [ ] 6. A credit risk dataset, plus cleaning missing and messy data
+- [x] 6. A credit risk dataset, plus cleaning missing and messy data
 - [ ] 7. Predicting who will struggle to repay, and explaining why (SHAP)
 
 ### Phase 3: The recommendation engine (week 3)

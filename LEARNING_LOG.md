@@ -68,3 +68,18 @@
 - Result with 1,000 offers: LightGBM 506, forest 499, logistic regression 466, tree 377.
 - A 7-buyer gap over the forest is too small to call a clear win; it could be luck of the split.
 - learning_rate=0.05 keeps each step small to avoid memorising the training data.
+
+## Lesson 6 – Loan risk data and cleaning (15–16 Oct 2026)
+**Did:** loaded the credit card default dataset, renamed columns, checked codes against the dictionary, tested unclear codes, cleaned and saved the data
+**Learned:**
+- `value_counts().sort_index()` reveals codes that shouldn't exist
+- `pd.crosstab(..., normalize="index")` shows the default rate per group
+- `.replace({old: new})` merges codes
+- `.to_csv()` saves a clean copy so cleaning doesn't need repeating
+- Small, meaningless codes → merge into "other"; large, useful codes → keep and understand
+**Result:** 30,000 customers, 22% defaulted; clean file saved to data/credit_clean.csv
+**Problems & fixes:**
+- NameError (X not defined) after reopening: the kernel restarted, so click Run All first after every break
+- My "-2 = no bill" assumption was wrong (only 33%); testing it in one line saved me from a bad cleaning decision
+- Asked where the month order came from: it's in the full dataset documentation, not the short dictionary. Always check the source
+**Question to answer next:** which customers will default, and can the model explain why it flagged each one?
